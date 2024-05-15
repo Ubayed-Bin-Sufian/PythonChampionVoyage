@@ -1,4 +1,4 @@
-# Catches a value error
+# Removing the error using else
 
 try:
     x = int(input("What's x? "))
@@ -6,4 +6,17 @@ try:
 except ValueError:
     print("x is not an integer")
 
-print(f"x is{x}")
+else:
+    print(f"x is{x}")
+
+
+
+"""
+try:
+    x = int(input("What's x? "))
+
+except ValueError:
+    print("x is not an integer")
+
+print(f"x is {x}")  # Error occurs earlier
+"""
