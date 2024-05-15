@@ -1,11 +1,10 @@
-# use of infinite loop 
+# use of infinite loop
+
 while True:
     try:
         x = int(input("What's x? "))
-
     except ValueError:
         print("x is not an integer")
-
     else:
         break
 
@@ -17,11 +16,9 @@ print(f"x is {x}")
 # Removing the error using else
 
 try:
-    x = int(input("What's x? "))
-    
+    x = int(input("What's x? "))    
 except ValueError:
     print("x is not an integer")
-
 else:
     print(f"x is{x}")
 """
@@ -31,7 +28,6 @@ else:
 """
 try:
     x = int(input("What's x? "))
-
 except ValueError:
     print("x is not an integer")
 
