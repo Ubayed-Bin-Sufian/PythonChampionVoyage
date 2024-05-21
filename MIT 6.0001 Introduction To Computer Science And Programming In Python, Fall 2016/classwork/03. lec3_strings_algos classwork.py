@@ -1,7 +1,7 @@
 # CLASSWORK
 
 # print the length of the string in parenthesis
-# x = "abcdefgh"
+x = "abcdefgh"
 # print("Length of the string:", len(x))
 
 # # Indexing starts from 0
@@ -16,6 +16,12 @@
 # print(x[::])
 # print(x[::-1])
 # print(x[4:1:-2])
+
+# Strings are immutable 
+# print(x[0])
+# x[0] = 'y'  # Gives an error
+x = "y" + x[0: len(x)]
+print(x)
 
 ####################
 ## EXAMPLE: for loops over strings
