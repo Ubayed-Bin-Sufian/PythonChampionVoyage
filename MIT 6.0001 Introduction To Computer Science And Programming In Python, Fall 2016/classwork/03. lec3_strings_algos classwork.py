@@ -82,26 +82,28 @@
 
 ## Classwork exercises
 # The following code includes spaces also
-s1 = "mit u rock"
-s2 = "i rule mit"
+# s1 = "mit u rock"
+# s2 = "i rule mit"
 
-if len(s1) == len(s2):
-    for char1 in s1:
-        for char2 in s2:
-            if char1 == char2:
-                print("common letter")
-                break
+# if len(s1) == len(s2):
+#     for char1 in s1:
+#         for char2 in s2:
+#             if char1 == char2:
+#                 print("common letter")
+#                 break
 
 
 ####################
 ## EXAMPLE: perfect cube 
 ####################
-#cube = 27
-##cube = 8120601
-#for guess in range(cube+1):
-#    if guess**3 == cube:
-#        print("Cube root of", cube, "is", guess)
-#        # loops keeps going even after found the cube root
+# The following code does not consider negative cubes and imperfect cubes
+cube = 27
+#cube = 8120601
+#cube = 2156  # silently fails keeps going on
+for guess in range(cube+1):
+   if guess**3 == cube:
+       print("Cube root of", cube, "is", guess)
+       # loops keeps going even after found the cube root
     
 
 ####################
