@@ -62,23 +62,37 @@
 # for i in range(times):
 #    print(word, "!!!")
 
+
 ## CHALLENGE: rewrite while loop with a for loop
-an_letters = "aefhilmnorsxAEFHILMNORSX"
-word = input("I will cheer for you! Enter a word: ")
-times = int(input("Enthusiasm level (1-10): "))
+# an_letters = "aefhilmnorsxAEFHILMNORSX"
+# word = input("I will cheer for you! Enter a word: ")
+# times = int(input("Enthusiasm level (1-10): "))
 
-# if in confusion, go to line 31 & 38
-for char in word:
-   if char in an_letters:
-       print("Give me an " + char + "! " + char)
-   else:
-       print("Give me a  " + char + "! " + char)
+# # if in confusion, go to line 31 & 38
+# for char in word:
+#    if char in an_letters:
+#        print("Give me an " + char + "! " + char)
+#    else:
+#        print("Give me a  " + char + "! " + char)
 
-print("What does that spell?")
-for i in range(times):
-   print(word, "!!!")
+# print("What does that spell?")
+# for i in range(times):
+#    print(word, "!!!")
 
-    
+
+## Classwork exercises
+# The following code includes spaces also
+s1 = "mit u rock"
+s2 = "i rule mit"
+
+if len(s1) == len(s2):
+    for char1 in s1:
+        for char2 in s2:
+            if char1 == char2:
+                print("common letter")
+                break
+
+
 ####################
 ## EXAMPLE: perfect cube 
 ####################
