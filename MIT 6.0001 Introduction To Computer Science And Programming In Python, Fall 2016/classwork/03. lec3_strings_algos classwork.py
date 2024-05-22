@@ -97,31 +97,34 @@
 ## EXAMPLE: perfect cube 
 ####################
 # The following code does not consider negative cubes and imperfect cubes
-cube = 27
-#cube = 8120601
-#cube = 2156  # silently fails keeps going on
-for guess in range(cube+1):
-   if guess**3 == cube:
-       print("Cube root of", cube, "is", guess)
-       # loops keeps going even after found the cube root
+# cube = 27
+# #cube = 8120601
+# #cube = 2156  # silently fails keeps going on
+# for guess in range(cube+1):
+#    if guess**3 == cube:
+#        print("Cube root of", cube, "is", guess)
+#        # loops keeps going even after found the cube root
     
 
 ####################
 ## EXAMPLE: guess and check cube root 
 ####################
-#cube = 27
-##cube = 8120601
-#for guess in range(abs(cube)+1):
-#    # passed all potential cube roots
-#    if guess**3 >= abs(cube):
-#        # no need to keep searching
-#        break
-#if guess**3 != abs(cube):
-#    print(cube, 'is not a perfect cube')
-#else:
-#    if cube < 0:
-#        guess = -guess
-#    print('Cube root of ' + str(cube) + ' is ' + str(guess))
+# cube = 27
+# cube = 8120601
+# cube = 6505
+cube = -27
+# The absolute value (or modulus) | x | of a real number x is the non-negative value of x without regard to its sign
+for guess in range(abs(cube)+1):
+   # passed all potential cube roots
+   if guess**3 >= abs(cube):
+       # no need to keep searching
+       break
+if guess**3 != abs(cube):
+   print(cube, 'is not a perfect cube')
+else:
+   if cube < 0:
+       guess = -guess
+   print('Cube root of ' + str(cube) + ' is ' + str(guess))
 
 
 ####################
