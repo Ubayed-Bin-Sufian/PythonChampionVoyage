@@ -112,41 +112,41 @@
 # cube = 27
 # cube = 8120601
 # cube = 6505
-cube = -27
-# The absolute value (or modulus) | x | of a real number x is the non-negative value of x without regard to its sign
-for guess in range(abs(cube)+1):
-   # passed all potential cube roots
-   if guess**3 >= abs(cube):
-       # no need to keep searching
-       break
-if guess**3 != abs(cube):
-   print(cube, 'is not a perfect cube')
-else:
-   if cube < 0:
-       guess = -guess
-   print('Cube root of ' + str(cube) + ' is ' + str(guess))
+# cube = -27
+# # The absolute value (or modulus) | x | of a real number x is the non-negative value of x without regard to its sign
+# for guess in range(abs(cube)+1):
+#    # passed all potential cube roots
+#    if guess**3 >= abs(cube):
+#        # no need to keep searching
+#        break
+# if guess**3 != abs(cube):
+#    print(cube, 'is not a perfect cube')
+# else:
+#    if cube < 0:
+#        guess = -guess
+#    print('Cube root of ' + str(cube) + ' is ' + str(guess))
 
 
 ####################
 ## EXAMPLE: approximate cube root 
 ####################
-#cube = 27
-##cube = 8120601
-##cube = 10000
-#epsilon = 0.1
-#guess = 0.0
-#increment = 0.01
-#num_guesses = 0
-## look for close enough answer and make sure
-## didn't accidentally skip the close enough bound
-#while abs(guess**3 - cube) >= epsilon and guess <= cube:
-#    guess += increment
-#    num_guesses += 1
-#print('num_guesses =', num_guesses)
-#if abs(guess**3 - cube) >= epsilon:
-#    print('Failed on cube root of', cube, "with these parameters.")
-#else:
-#    print(guess, 'is close to the cube root of', cube)
+cube = 27
+cube = 8120601
+cube = 10000
+epsilon = 0.1
+guess = 0.0
+increment = 0.01
+num_guesses = 0
+# look for close enough answer and make sure
+# didn't accidentally skip the close enough bound
+while abs(guess**3 - cube) >= epsilon and guess <= cube:
+   guess += increment
+   num_guesses += 1
+print('num_guesses =', num_guesses)
+if abs(guess**3 - cube) >= epsilon:
+   print('Failed on cube root of', cube, "with these parameters.")
+else:
+   print(guess, 'is close to the cube root of', cube)
 
 
 ####################
