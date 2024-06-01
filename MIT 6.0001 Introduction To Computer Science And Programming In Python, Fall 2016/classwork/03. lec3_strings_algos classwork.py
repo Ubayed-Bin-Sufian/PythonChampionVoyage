@@ -152,7 +152,7 @@
 ####################
 ## EXAMPLE: bisection cube root (only positive cubes!)
 ####################
-# cube = 27
+# cube = 36
 # # cube = 8120601
 # # won't work with x < 1 because initial upper bound is less than ans
 # #cube = 0.25
@@ -173,13 +173,37 @@
 #    num_guesses += 1
 # print('num_guesses =', num_guesses)
 # print(guess, 'is close to the cube root of', cube)
+
+## Assignment 
+# Modify the above code for x < 1 
+cube = 0.064
+epsilon = 0.01
+num_guesses = 0
+low = cube  # lower boundary 
+high = 1  # upper boundary 
+guess = (high + low)/2.0
+while abs(guess**3 - cube) >= epsilon:
+   if guess**3 < cube:
+       # look only in upper half search space
+       low = guess
+   else:
+       # look only in lower half search space
+       high = guess
+   # next guess is halfway in search space
+   guess = (high + low)/2.0
+   num_guesses += 1
+print('num_guesses =', num_guesses)
+print(guess, 'is close to the cube root of', cube)
+
+## Assignment 
+# Modify the above code for negative cubes
  
 
 # In-class question
-s = "6.00 is 6.0001 and 6.0002"
-new_str = ""
-new_str += s[-1]
-new_str += s[0]
-new_str += s[4::30] 
-new_str += s[13:10:-1]
-print(new_str)
+# s = "6.00 is 6.0001 and 6.0002"
+# new_str = ""
+# new_str += s[-1]
+# new_str += s[0]
+# new_str += s[4::30] 
+# new_str += s[13:10:-1]
+# print(new_str)
