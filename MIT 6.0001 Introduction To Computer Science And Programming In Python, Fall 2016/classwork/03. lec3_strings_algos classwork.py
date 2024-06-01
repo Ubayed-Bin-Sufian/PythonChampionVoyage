@@ -176,11 +176,32 @@
 
 ## Assignment 
 # Modify the above code for x < 1 
-cube = 0.064
+# cube = 0.064
+# epsilon = 0.01
+# num_guesses = 0
+# low = cube  # lower boundary 
+# high = 1  # upper boundary 
+# guess = (high + low)/2.0
+# while abs(guess**3 - cube) >= epsilon:
+#    if guess**3 < cube:
+#        # look only in upper half search space
+#        low = guess
+#    else:
+#        # look only in lower half search space
+#        high = guess
+#    # next guess is halfway in search space
+#    guess = (high + low)/2.0
+#    num_guesses += 1
+# print('num_guesses =', num_guesses)
+# print(guess, 'is close to the cube root of', cube)
+
+## Assignment 
+# Modify the above code for negative cubes
+cube = -125
 epsilon = 0.01
 num_guesses = 0
 low = cube  # lower boundary 
-high = 1  # upper boundary 
+high = 0  # upper boundary 
 guess = (high + low)/2.0
 while abs(guess**3 - cube) >= epsilon:
    if guess**3 < cube:
@@ -194,9 +215,6 @@ while abs(guess**3 - cube) >= epsilon:
    num_guesses += 1
 print('num_guesses =', num_guesses)
 print(guess, 'is close to the cube root of', cube)
-
-## Assignment 
-# Modify the above code for negative cubes
  
 
 # In-class question
