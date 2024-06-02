@@ -1,7 +1,7 @@
-# #########################
-# ## EXAMPLE: combinations of print and return
-# ## Python Tutor link: http://www.pythontutor.com/visualize.html#code=def%20is_even_with_return(%20i%20%29%3A%0A%20%20%20%20%22%22%22%20%0A%20%20%20%20Input%3A%20i,%20a%20positive%20int%0A%20%20%20%20Returns%20True%20if%20i%20is%20even,%20otherwise%20False%0A%20%20%20%20%22%22%22%0A%20%20%20%20print('with%20return'%29%0A%20%20%20%20remainder%20%3D%20i%20%25%202%0A%20%20%20%20return%20remainder%20%3D%3D%200%0A%0Ais_even_with_return(3%29%20%0Aprint(is_even_with_return(3%29%20%29%0A%0Adef%20is_even_without_return(%20i%20%29%3A%0A%20%20%20%20%22%22%22%20%0A%20%20%20%20Input%3A%20i,%20a%20positive%20int%0A%20%20%20%20Does%20not%20return%20anything%0A%20%20%20%20%22%22%22%0A%20%20%20%20print('without%20return'%29%0A%0Ais_even_without_return(3%29%0Aprint(is_even_without_return(3%29%20%29%0A&cumulative=false&curInstr=0&heapPrimitives=false&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
-# #########################
+#########################
+## EXAMPLE: combinations of print and return
+## Python Tutor link: http://www.pythontutor.com/visualize.html#code=def%20is_even_with_return(%20i%20%29%3A%0A%20%20%20%20%22%22%22%20%0A%20%20%20%20Input%3A%20i,%20a%20positive%20int%0A%20%20%20%20Returns%20True%20if%20i%20is%20even,%20otherwise%20False%0A%20%20%20%20%22%22%22%0A%20%20%20%20print('with%20return'%29%0A%20%20%20%20remainder%20%3D%20i%20%25%202%0A%20%20%20%20return%20remainder%20%3D%3D%200%0A%0Ais_even_with_return(3%29%20%0Aprint(is_even_with_return(3%29%20%29%0A%0Adef%20is_even_without_return(%20i%20%29%3A%0A%20%20%20%20%22%22%22%20%0A%20%20%20%20Input%3A%20i,%20a%20positive%20int%0A%20%20%20%20Does%20not%20return%20anything%0A%20%20%20%20%22%22%22%0A%20%20%20%20print('without%20return'%29%0A%0Ais_even_without_return(3%29%0Aprint(is_even_without_return(3%29%20%29%0A&cumulative=false&curInstr=0&heapPrimitives=false&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
+#########################
 # def is_even_with_return( i ):
 #     """ 
 #     Input: i, a positive int
@@ -14,16 +14,18 @@
 # is_even_with_return(3) 
 # print(is_even_with_return(3) )
 
-# def is_even_without_return( i ):
-#     """ 
-#     Input: i, a positive int
-#     Does not return anything
-#     """
-#     print('without return')
-#     remainder = i % 2
 
-# is_even_without_return(3)
-# print(is_even_without_return(3) )
+# Python return value None (represents absence of a value) as no return is given
+def is_even_without_return( i ):
+    """ 
+    Input: i, a positive int
+    Does not return anything
+    """
+    print('without return')
+    remainder = i % 2
+
+is_even_without_return(3)
+print(is_even_without_return(3) )
 
 # # Simple is_even function definition
 # def is_even( i ):
