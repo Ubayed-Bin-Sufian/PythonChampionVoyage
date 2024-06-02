@@ -15,17 +15,28 @@
 # print(is_even_with_return(3) )
 
 
-# Python return value None (represents absence of a value) as no return is given
-def is_even_without_return( i ):
-    """ 
-    Input: i, a positive int
-    Does not return anything
-    """
-    print('without return')
-    remainder = i % 2
+## CLASSWORK 01
+def f(x):
+    x = x + 1
+    print("in f(x): x =", x)
+    return x
 
-is_even_without_return(3)
-print(is_even_without_return(3) )
+x = 3
+z = f(x)
+print("z = f(x) =", z)
+
+
+# # Python return value None (represents absence of a value) as no return is given
+# def is_even_without_return( i ):
+#     """ 
+#     Input: i, a positive int
+#     Does not return anything
+#     """
+#     print('without return')
+#     remainder = i % 2
+
+# is_even_without_return(3)
+# print(is_even_without_return(3) )
 
 # # Simple is_even function definition
 # def is_even( i ):
