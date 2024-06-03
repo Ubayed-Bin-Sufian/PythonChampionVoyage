@@ -11,19 +11,19 @@
 #     remainder = i % 2
 #     return remainder == 0
 
-# is_even_with_return(3) 
+# is_even_with_return(3)  # <- False
 # print(is_even_with_return(3) )
 
 
 ## CLASSWORK 01
-def f(x):
-    x = x + 1
-    print("in f(x): x =", x)
-    return x
+# def f(x):
+#     x = x + 1
+#     print("in f(x): x =", x)
+#     return x
 
-x = 3
-z = f(x)
-print("z = f(x) =", z)
+# x = 3
+# z = f(x)
+# print("z = f(x) =", z)
 
 
 # # Python return value None (represents absence of a value) as no return is given
@@ -34,9 +34,11 @@ print("z = f(x) =", z)
 #     """
 #     print('without return')
 #     remainder = i % 2
+#     # return None (Python returns None automatically)
 
-# is_even_without_return(3)
-# print(is_even_without_return(3) )
+# is_even_without_return(3)  # <- None
+# print(is_even_without_return(3))
+
 
 # # Simple is_even function definition
 # def is_even( i ):
@@ -54,6 +56,22 @@ print("z = f(x) =", z)
 #         print(i, "even")
 #     else:
 #         print(i, "odd")
+
+
+## CLASSWORK 02
+def func_a():
+    print('inside func_a')
+def func_b(y):
+    print('inside func_b')
+    return y
+def func_c(z):
+    print('inside func_c')
+    return z()
+
+print(func_a()) 
+print(5 + func_b(2)) 
+print(func_c(func_a)) 
+
 
 # #########################
 # ## EXAMPLE: applying functions to repeat same task many times
