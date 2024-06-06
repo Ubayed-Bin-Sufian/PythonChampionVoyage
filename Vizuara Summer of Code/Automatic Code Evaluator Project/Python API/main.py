@@ -30,5 +30,12 @@ def get_user(user_id):
 
     return jsonify(user_data), 200  # 200 is the default success code 
 
+# POST Request
+@app.route("/create-user", methods=["POST"])
+def create_user():
+    data = request.get_jason()
+
+    return jsonify(data), 201
+
 if __name__=="__main__":
     app.run(debug=True)  # This starts the Flask development server
