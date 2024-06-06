@@ -3,14 +3,16 @@
 import os
 from dotenv import load_dotenv
 
-# Import the OpenAI library
-import openai
+from openai import OpenAI
+
 
 # Load environment variables from the .env file
 load_dotenv()
 
 # Access the API key
 openai_api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI()
+client.api_key=openai_api_key
 
 # Print or use the API key
 print(f"Your OpenAI API Key is: {openai_api_key}")
@@ -19,11 +21,13 @@ print(f"Your OpenAI API Key is: {openai_api_key}")
 def chat_with_gpt(prompt):
 
     # Call the OpenAI API with the provided prompt
-    response = openai.ChatCompletion.create(
-        model = "gpt-3.5-turbo",
-        messages=[{"role": "user", "content": prompt}]
+    response = client.completions.create(
+      model="gpt-3.5-turbo",
+      prompt=prompt,
+      temperature=0.5,
+      max_tokens=100
     )
-
+   
     # Return the generated response after stripping whitespace
     return response.choices[0].message.content.strip()
 
