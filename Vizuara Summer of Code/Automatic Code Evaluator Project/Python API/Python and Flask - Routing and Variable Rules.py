@@ -12,5 +12,9 @@ def home():
 def about():
     return "This is the about page"
 
+@app.route("/blog")
+def blog():
+    return "This is the blog page"
+
 if __name__=="__main__":
     app.run(debug=True)
