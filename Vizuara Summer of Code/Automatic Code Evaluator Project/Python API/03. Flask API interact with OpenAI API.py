@@ -1,10 +1,19 @@
 from flask import Flask, request, jsonify
 import requests
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from the .env file
+load_dotenv()
 
 app = Flask(__name__)
 
+@app.route("/")
+def welcome():
+    return "Welcome Ubayed"
+
 # Replace 'your_openai_api_key' with your actual OpenAI API key
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Function to call OpenAI's ChatGPT API
 def call_openai_api(messages):
