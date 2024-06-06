@@ -1,10 +1,19 @@
 # Practice from https://www.youtube.com/watch?v=q5HiD5PNuck
 
+import os
+from dotenv import load_dotenv
+
 # Import the OpenAI library
 import openai
 
-# Set the API key for OpenAI
-openai.api_key ="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"
+# Load environment variables from the .env file
+load_dotenv()
+
+# Access the API key
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
+# Print or use the API key
+print(f"Your OpenAI API Key is: {openai_api_key}")
 
 # Define a function to interact with GPT
 def chat_with_gpt(prompt):
