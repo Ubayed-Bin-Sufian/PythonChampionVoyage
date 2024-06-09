@@ -111,6 +111,22 @@
 
 
 # #########################
+# ## CLASSWORK 06: hader scope example from slides
+# ## Python Tutor link: http://www.pythontutor.com/visualize.html#code=def%20g(x%29%3A%0A%20%20%20%20def%20h(%29%3A%0A%20%20%20%20%20%20%20%20x%20%3D%20'abc'%0A%20%20%20%20x%20%3D%20x%20%2B%201%0A%20%20%20%20print('in%20g(x%29%3A%20x%20%3D',%20x%29%0A%20%20%20%20h(%29%0A%20%20%20%20return%20x%0A%0Ax%20%3D%203%0Az%20%3D%20g(x%29&cumulative=false&curInstr=0&heapPrimitives=false&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
+# #########################
+def g(x):
+    def h():
+        x = 'abc'
+    x = x + 1
+    print('in g(x): x =', x)
+    h()
+    return x
+
+x = 3
+z = g(x)
+
+
+# #########################
 # ## EXAMPLE: applying functions to repeat same task many times
 # #########################
 # def bisection_cuberoot_approx(x, epsilon):
@@ -150,22 +166,6 @@
 # # then apply that function with parameters 3 and 4
 # val = f()(3,4)
 # print(val)
-
-
-# #########################
-# ## EXAMPLE: hader scope example from slides
-# ## Python Tutor link: http://www.pythontutor.com/visualize.html#code=def%20g(x%29%3A%0A%20%20%20%20def%20h(%29%3A%0A%20%20%20%20%20%20%20%20x%20%3D%20'abc'%0A%20%20%20%20x%20%3D%20x%20%2B%201%0A%20%20%20%20print('in%20g(x%29%3A%20x%20%3D',%20x%29%0A%20%20%20%20h(%29%0A%20%20%20%20return%20x%0A%0Ax%20%3D%203%0Az%20%3D%20g(x%29&cumulative=false&curInstr=0&heapPrimitives=false&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
-# #########################
-# def g(x):
-#     def h():
-#         x = 'abc'
-#     x = x + 1
-#     print('in g(x): x =', x)
-#     h()
-#     return x
-
-# x = 3
-# z = g(x)
 
 
 # #########################
