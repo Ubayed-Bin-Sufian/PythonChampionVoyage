@@ -58,7 +58,7 @@
 #         print(i, "odd")
 
 
-# ## CLASSWORK 02
+# ## CLASSWORK 02: functions as arguments
 # def func_a():
 #     print('inside func_a')
 # def func_b(y):
@@ -73,7 +73,7 @@
 # print(func_c(func_a)) 
 
 
-## CLASSWORK 03
+## CLASSWORK 03: shows accessing variables outside scope
 # Explanation:
 # Inside f(y), a local x is set to 1, incremented to 2, and printed; x is re-defined in the scope of f.
 # The global x remains 5 and is printed after the function call.
@@ -86,7 +86,7 @@
 # print(x)
 
 
-## CLASSWORK 04
+## CLASSWORK 04: shows accessing variables outside scope
 # Explanation:
 # Inside g(y), the global x (which is 5) is printed, then x + 1 (which is 6) is printed; x inside g is picked up from scope that called g.
 # The global x remains 5 and is printed again after the function call.
@@ -98,13 +98,13 @@
 # print(x)
 
 
-## CLASSWORK 05
+## CLASSWORK 05: shows accessing variables outside scope
 # The code will result in an error: "UnboundLocalError: local variable 'x' referenced before assignment"
 # Explanation:
 # Inside h(y), x += 1 tries to increment x before it is assigned locally, causing an UnboundLocalError.
 # The global x is not modified and remains 5, but this part is not reached due to the error.
 # def h(y):
-#     x += 1
+#     x += 1 #leads to an error without line `global x` inside h
 #     x = 5
 # h(x)
 # print(x)
@@ -138,26 +138,6 @@
 
 
 # #########################
-# ## EXAMPLE: functions as arguments
-# ## Python Tutor link: http://www.pythontutor.com/visualize.html#code=def%20func_a(%29%3A%0A%20%20%20%20print('inside%20func_a'%29%0A%0Adef%20func_b(y%29%3A%0A%20%20%20%20print('inside%20func_b'%29%0A%20%20%20%20return%20y%0A%0Adef%20func_c(z%29%3A%0A%20%20%20%20print('inside%20func_c'%29%0A%20%20%20%20return%20z(%29%0A%0Aprint(func_a(%29%29%0Aprint(5%2Bfunc_b(2%29%29%0Aprint(func_c(func_a%29%29%0A&cumulative=false&curInstr=0&heapPrimitives=false&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
-# #########################
-# def func_a():
-#     print('inside func_a')
-
-# def func_b(y):
-#     print('inside func_b')
-#     return y
-
-# def func_c(z):
-#     print('inside func_c')
-#     return z()
-
-# print(func_a())
-# print(5+func_b(2))
-# print(func_c(func_a))
-
-
-# #########################
 # ## EXAMPLE: returning function objects
 # ## Python Tutor link: http://www.pythontutor.com/visualize.html#code=def%20f(%29%3A%0A%20%20%20%20def%20x(a,%20b%29%3A%0A%20%20%20%20%20%20%20%20return%20a%2Bb%0A%20%20%20%20return%20x%0A%20%20%20%20%0Aval%20%3D%20f(%29(3,4%29%0Aprint(val%29%0A&cumulative=false&curInstr=0&heapPrimitives=false&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
 # #########################
@@ -170,33 +150,6 @@
 # # then apply that function with parameters 3 and 4
 # val = f()(3,4)
 # print(val)
-
-
-
-# #########################
-# ## EXAMPLE: shows accessing variables outside scope
-# #########################
-# def f(y):
-#     x = 1
-#     x += 1
-#     print(x)
-# x = 5
-# f(x)
-# print(x)
-
-# def g(y):
-#     print(x)
-#     print(x+1)
-# x = 5
-# g(x)
-# print(x)
-
-# def h(y):
-#     pass
-#     #x += 1 #leads to an error without line `global x` inside h
-# x = 5
-# h(x)
-# print(x)
 
 
 # #########################
