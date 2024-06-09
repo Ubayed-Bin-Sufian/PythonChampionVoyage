@@ -103,11 +103,11 @@
 # Explanation:
 # Inside h(y), x += 1 tries to increment x before it is assigned locally, causing an UnboundLocalError.
 # The global x is not modified and remains 5, but this part is not reached due to the error.
-def h(y):
-    x += 1
-    x = 5
-h(x)
-print(x)
+# def h(y):
+#     x += 1
+#     x = 5
+# h(x)
+# print(x)
 
 
 # #########################
