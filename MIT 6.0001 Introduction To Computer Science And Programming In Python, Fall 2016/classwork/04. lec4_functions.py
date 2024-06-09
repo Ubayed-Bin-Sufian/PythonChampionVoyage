@@ -77,12 +77,24 @@
 # Explanation:
 # Inside f(y), a local x is set to 1, incremented to 2, and printed; x is re-defined in the scope of f.
 # The global x remains 5 and is printed after the function call.
-def f(y):
-    x = 1
-    x += 1
+# def f(y):
+#     x = 1
+#     x += 1
+#     print(x)
+# x = 5
+# f(x)
+# print(x)
+
+
+## CLASSWORK 04
+# Explanation:
+# Inside g(y), the global x (which is 5) is printed, then x + 1 (which is 6) is printed; x inside g is picked up from scope that called g.
+# The global x remains 5 and is printed again after the function call.
+def g(y):
     print(x)
+    print(x + 1)
 x = 5
-f(x)
+g(x)
 print(x)
 
 
