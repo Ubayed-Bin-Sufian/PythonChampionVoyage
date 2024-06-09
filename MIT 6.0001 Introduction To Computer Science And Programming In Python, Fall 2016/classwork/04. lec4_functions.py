@@ -90,11 +90,23 @@
 # Explanation:
 # Inside g(y), the global x (which is 5) is printed, then x + 1 (which is 6) is printed; x inside g is picked up from scope that called g.
 # The global x remains 5 and is printed again after the function call.
-def g(y):
-    print(x)
-    print(x + 1)
-x = 5
-g(x)
+# def g(y):
+#     print(x)
+#     print(x + 1)
+# x = 5
+# g(x)
+# print(x)
+
+
+## CLASSWORK 05
+# The code will result in an error: "UnboundLocalError: local variable 'x' referenced before assignment"
+# Explanation:
+# Inside h(y), x += 1 tries to increment x before it is assigned locally, causing an UnboundLocalError.
+# The global x is not modified and remains 5, but this part is not reached due to the error.
+def h(y):
+    x += 1
+    x = 5
+h(x)
 print(x)
 
 
