@@ -58,19 +58,32 @@
 #         print(i, "odd")
 
 
-## CLASSWORK 02
-def func_a():
-    print('inside func_a')
-def func_b(y):
-    print('inside func_b')
-    return y
-def func_c(z):
-    print('inside func_c')
-    return z()
+# ## CLASSWORK 02
+# def func_a():
+#     print('inside func_a')
+# def func_b(y):
+#     print('inside func_b')
+#     return y
+# def func_c(z):
+#     print('inside func_c')
+#     return z()
 
-print(func_a()) 
-print(5 + func_b(2)) 
-print(func_c(func_a)) 
+# print(func_a()) 
+# print(5 + func_b(2)) 
+# print(func_c(func_a)) 
+
+
+## CLASSWORK 03
+# Explanation:
+# Inside f(y), a local x is set to 1, incremented to 2, and printed; x is re-defined in the scope of f.
+# The global x remains 5 and is printed after the function call.
+def f(y):
+    x = 1
+    x += 1
+    print(x)
+x = 5
+f(x)
+print(x)
 
 
 # #########################
